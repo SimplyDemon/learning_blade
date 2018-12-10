@@ -90,14 +90,14 @@
                                     </li>
 
                                     <li>
-                                        <a href="about.html">Pages</a>
-                                        <ul>
-                                            <!-- features -->
-                                            <li>
-                                                <a href="shortcodes_teasers.html">Shortcodes &amp; Widgets</a>
-                                            </li>
-                                            <!-- eof features -->
-                                        </ul>
+                                        <a href="{{HOME_URL . 'blog'}}">Blog</a>
+                                        {{--<ul>--}}
+                                            {{--<!-- features -->--}}
+                                            {{--<li>--}}
+                                                {{--<a href="shortcodes_teasers.html">Shortcodes &amp; Widgets</a>--}}
+                                            {{--</li>--}}
+                                            {{--<!-- eof features -->--}}
+                                        {{--</ul>--}}
                                     </li>
                                     <!-- eof pages -->
 
