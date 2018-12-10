@@ -135,7 +135,7 @@
 
 									<span class="entry-date highlight3 small-text">
 											<time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
-												March 9, 2017
+                                                {{date("F j, Y",strtotime($post->created_at))}}
 											</time>
 									</span>
                                     @foreach($post->categories as $category)
