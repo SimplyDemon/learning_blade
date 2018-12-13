@@ -1,14 +1,14 @@
 <?php
 
-require_once('vendor/autoload.php');
-$dotenv = new Dotenv\Dotenv(__DIR__);
+require_once('../vendor/autoload.php');
+$dotenv = new Dotenv\Dotenv(__DIR__ . '/../');
 $dotenv->load();
 
-require_once 'config/globals.php';
-require_once 'config/database.php';
-require_once 'config/view.php';
-require_once 'config/router.php';
-require_once 'config/container.php';
+require_once '../config/globals.php';
+require_once '../config/database.php';
+require_once '../config/view.php';
+require_once '../config/router.php';
+require_once '../config/container.php';
 
 $serverRequest = \GuzzleHttp\Psr7\ServerRequest::fromGlobals();
 $matcher = $routerContainer->getMatcher();

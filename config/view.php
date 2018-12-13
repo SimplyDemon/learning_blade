@@ -4,10 +4,10 @@ $engineResolver = new \Illuminate\View\Engines\EngineResolver();
 
 $fileSystem = new \Illuminate\Filesystem\Filesystem();
 $fileViewFinder = new \Illuminate\View\FileViewFinder(
-    $fileSystem, [RESORCES_PATH . 'views']
+    $fileSystem, ['../resources/views']
 );
 
-$compiler = new \Illuminate\View\Compilers\BladeCompiler($fileSystem, RESORCES_PATH . 'cache');
+$compiler = new \Illuminate\View\Compilers\BladeCompiler($fileSystem, '../resources/cache');
 
 $engineResolver->register('blade', function () use ($compiler) {
     return new \Illuminate\View\Engines\CompilerEngine($compiler);
