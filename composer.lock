@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf7ba22b46b74099bd181dcfaffd942e",
+    "content-hash": "a466b3afab1b7c5dc016de609954c849",
     "packages": [
         {
             "name": "aura/di",
@@ -1092,6 +1092,42 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2016-02-11T07:05:27+00:00"
+        },
+        {
+            "name": "simplydemon/notifier",
+            "version": "v1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SimplyDemon/Notifier.git",
+                "reference": "d7fa7ba1f7e48ae50d8abf70780f3f76f5842043"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SimplyDemon/Notifier/zipball/d7fa7ba1f7e48ae50d8abf70780f3f76f5842043",
+                "reference": "d7fa7ba1f7e48ae50d8abf70780f3f76f5842043",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "2.x-dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NtSchool\\Notifier\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "sd",
+                    "email": "email@example.com"
+                }
+            ],
+            "description": "description_text",
+            "time": "2018-12-17T15:22:33+00:00"
         },
         {
             "name": "symfony/contracts",

@@ -15,7 +15,7 @@ final class HomeAction {
 	}
 
 	public function __invoke( RequestInterface $request ) {
-		$this->logger->warning('Foo');
+		$this->logger->warning('Foo11');
 		return $this->renderer->make( 'index', [
 			'title' => 'Главная страница'
 		] );

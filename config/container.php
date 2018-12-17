@@ -10,10 +10,9 @@ $builder = new ContainerBuilder();
 $container = $builder->newInstance();
 
 $container->set('logger', function (){
-	// create a log channel
-	$log = new Katzgrau\KLogger\Logger(__DIR__ . '/../resources/logs');
-
-	$logger = new \NtSchool\KatzgrauLogger($log);
+	//	$log = new Monolog\Logger('name');
+//	$log->pushHandler(new StreamHandler(__DIR__ . '/../resources/logs/main.log'));
+	$logger = new \NtSchool\Notifier\Adapter\VKNotifierAdapter(env('vkApiKey'), env('vkUserID'));
 
 	return $logger;
 });

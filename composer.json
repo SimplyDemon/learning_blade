@@ -15,6 +15,7 @@
         "vlucas/phpdotenv": "2.4.x-dev",
         "illuminate/pagination": "5.7.x-dev",
         "monolog/monolog": "2.x-dev",
-        "katzgrau/klogger": "1.2.1"
+        "katzgrau/klogger": "1.2.1",
+        "simplydemon/notifier": "^1.5"
     }
 }
