@@ -12,6 +12,7 @@ require_once '../config/container.php';
 
 $serverRequest = \GuzzleHttp\Psr7\ServerRequest::fromGlobals();
 $matcher = $routerContainer->getMatcher();
+
 if ($result = $matcher->match($serverRequest)) {
     foreach ($result->attributes as $name => $attribute) {
         $serverRequest = $serverRequest->withAttribute($name, $attribute);

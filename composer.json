@@ -1,5 +1,5 @@
 {
-    "name": "ntschool/php3",
+    "name": "simplydemon/shop_project",
     "type": "project",
     "autoload": {
         "psr-4": {
@@ -16,6 +16,8 @@
         "illuminate/pagination": "5.7.x-dev",
         "monolog/monolog": "2.x-dev",
         "katzgrau/klogger": "1.2.1",
-        "simplydemon/notifier": "^1.5"
+        "simplydemon/notifier": "^1.5",
+        "illuminate/validation": "5.7.19",
+        "illuminate/translation": "5.7.19"
     }
 }

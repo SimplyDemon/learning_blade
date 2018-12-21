@@ -17,6 +17,21 @@ $container->set('logger', function (){
 	return $logger;
 });
 
+$container->set('validator', function () use ($capsule) {
+	$filesystem = new Illuminate\Filesystem\Filesystem();
+	$loader = new Illuminate\Translation\FileLoader($filesystem, dirname(dirname(__FILE__)) . '/resources/lang');
+	$loader->addNamespace('lang', dirname(dirname(__FILE__)) . '/resources/lang');
+	$loader->load($lang = 'ru', $group = 'validation', $namespace = 'lang');
+
+	$factory = new Illuminate\Translation\Translator($loader, 'ru');
+	$validator = new Illuminate\Validation\Factory($factory);
+
+	$databasePresenceVerifier = new \Illuminate\Validation\DatabasePresenceVerifier($capsule->getDatabaseManager());
+	$validator->setPresenceVerifier($databasePresenceVerifier);
+
+	return $validator;
+});
+
 //$container->set('logger', function (){
 //	// create a log channel
 //	$log = new Logger('name');
@@ -37,4 +52,8 @@ $container->set(\NtSchool\Action\ContactUsAction::class, function () use ($rende
 
 $container->set(\NtSchool\Action\BlogAction::class, function () use ($renderer) {
     return new \NtSchool\Action\BlogAction($renderer);
+});
+
+$container->set(\NtSchool\Action\RegisterAction::class, function () use ($renderer, $container ) {
+    return new \NtSchool\Action\RegisterAction($renderer, $container->get('validator'));
 });
